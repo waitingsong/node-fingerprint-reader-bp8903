@@ -1,11 +1,13 @@
 {
-  "name": "npm-base",
+  "name": "@waiting/fingerprint-bp8903",
   "author": "waiting",
   "version": "0.0.1",
-  "description": "npm boilerplate",
+  "description": "南天 BP8903 集成键盘 指纹采集、验证",
   "keywords": [
-    "种子项目",
-    "typescript"
+    "ABC",
+    "BP8903",
+    "BP8905",
+    "fingerprint"
   ],
   "engines": {
     "node": ">=8.10.0"
@@ -17,12 +19,12 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bugs": {
-    "url": "https://github.com/waitingsong/npm-base/issues"
+    "url": "https://github.com/waitingsong/node-fingerprint-reader-bp8903/issues"
   },
-  "homepage": "https://github.com/waitingsong/npm-base#readme",
+  "homepage": "https://github.com/waitingsong/node-fingerprint-reader-bp8903#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waitingsong/npm-base.git"
+    "url": "git+https://github.com/waitingsong/node-fingerprint-reader-bp8903.git"
   },
   "license": "MIT",
   "nyc": {
