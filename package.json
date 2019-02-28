@@ -47,8 +47,12 @@
     "all": true
   },
   "dependencies": {
+    "@types/ffi": "*",
+    "@waiting/log": "^1.0.1",
     "@waiting/shared-core": "^1.5.0",
-    "rxjs": "^6.4.0"
+    "ffi": "^2.3.0",
+    "rxjs": "^6.4.0",
+    "win32-def": "^2.8.0"
   },
   "devDependencies": {
     "@types/mocha": "*",
