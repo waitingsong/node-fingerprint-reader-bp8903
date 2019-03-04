@@ -10,7 +10,7 @@ import {
   dllFuncs, initialOpts,
 } from './config'
 import { compareFP, findDeviceList, readOnce, readThrice } from './device'
-import { Device, DeviceOpts, Options } from './model'
+import { Device, DeviceOpts, Options, SampleMode } from './model'
 
 
 export async function init(options: Options): Promise<Device[]> {
@@ -44,7 +44,7 @@ export async function init(options: Options): Promise<Device[]> {
  */
 export function sampleFP(
   device: Device,
-  mode: 'simple' | 'strict' = 'strict',
+  mode: SampleMode = 'strict',
 ): Promise<string> {
 
   const buf = mode === 'simple' ? readOnce(device) : readThrice(device)

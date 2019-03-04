@@ -47,3 +47,10 @@ export type DllFuncsModel = FM.ExpandFnModel<FuncsModel>
 export interface Device extends DeviceBase {
   apib: DllFuncsModel
 }
+
+/**
+ * 采样次数
+ * simple: 1 time
+ * strict: 3 times
+ */
+export type SampleMode = 'simple' | 'strict'
