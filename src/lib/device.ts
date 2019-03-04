@@ -57,7 +57,7 @@ export function readOnce(device: Device, bufLen: number = 1024): Buffer {
     : Buffer.alloc(0)
 
   if (device.deviceOpts.debug) {
-    info(`Fingerprint readOnce code: ${code}. 1:succeed, 0/others:failed`)
+    info(`Fingerprint readOnce code: ${code}. (1:succeed, 0/others:failed)`)
   }
 
   return ret
@@ -78,7 +78,7 @@ export function readThrice(device: Device, bufLen: number = 1024): Buffer {
     : Buffer.alloc(0)
 
   if (device.deviceOpts.debug) {
-    info(`Fingerprint readThice code: ${code}. 1:succeed, 0/others:failed`)
+    info(`Fingerprint readThice code: ${code}. (1:succeed, 0/others:failed)`)
   }
 
   return ret
