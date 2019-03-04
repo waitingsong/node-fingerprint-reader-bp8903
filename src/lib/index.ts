@@ -53,7 +53,7 @@ export function sampleFP(
 }
 
 
-export function validateFP(device: Device, fp: string): Promise<boolean> {
+export function verifyFP(device: Device, fp: string): Promise<boolean> {
   const fp1$ = of(readOnce(device)).pipe(
     tap(buf => {
       if (! buf.byteLength) {

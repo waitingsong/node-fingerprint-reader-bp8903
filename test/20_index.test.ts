@@ -48,7 +48,7 @@ describe(filename, () => {
 
 
 describe(filename, () => {
-  it('Should validateFP() works', done => {
+  it('Should verifyFP() works', done => {
     const opts: Options = {
       dllTxt,
       dllSearchPath: dirname(dllTxt),
@@ -85,7 +85,7 @@ describe(filename, () => {
       }),
     )
 
-    const validate$ = zip(device$, samping$).pipe(
+    const verify$ = zip(device$, samping$).pipe(
       delay(500),
       tap(() => {
         console.info(`\n
@@ -95,10 +95,10 @@ describe(filename, () => {
         \n`)
       }),
       delay(500),
-      mergeMap(([device, fp]) => fpr.validateFP(device, fp)),
+      mergeMap(([device, fp]) => fpr.verifyFP(device, fp)),
       tap(matched => {
         if (! matched) {
-          throw new Error('validating failed. NOT matched')
+          throw new Error('verifyFP failed. NOT matched')
         }
       }),
       catchError((err: Error) => {
@@ -108,7 +108,7 @@ describe(filename, () => {
       finalize(() => done()),
     )
 
-    validate$.subscribe()
+    verify$.subscribe()
   })
 
 })
